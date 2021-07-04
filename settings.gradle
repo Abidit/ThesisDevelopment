@@ -1,0 +1,3 @@
+include ':lancewear'
+include ':app'
+rootProject.name = "Freelancing Application"

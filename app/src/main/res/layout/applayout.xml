@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="8dp"
+
+    android:background="@drawable/appback"
+    android:layout_marginVertical="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appJobName"
+        android:text="JobName"
+        android:layout_marginVertical="5dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="22sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appJobOwner"
+        android:visibility="gone"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="2dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appUserName"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="2dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appEmail"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="2dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/acceptedtxt"
+        android:text="Approved:"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="2dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="2dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accept Application"
+            android:id="@+id/acceptbtn"
+            android:visibility="invisible"
+            android:backgroundTint="@color/white"
+            tools:targetApi="lollipop" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:visibility="invisible"
+            android:id="@+id/cancelbtn"
+            android:backgroundTint="@color/teal_200"
+            tools:targetApi="lollipop" />
+    </LinearLayout>
+
+
+</LinearLayout>
