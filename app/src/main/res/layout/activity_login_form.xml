@@ -38,7 +38,7 @@
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
-                    android:layout_height="190dp"
+                    android:layout_height="200dp"
                     android:src="@drawable/logo"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
                         android:id="@+id/etUsername"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:layout_margin="18dp"
+                        android:layout_margin="20dp"
                         android:background="@drawable/white_background_edittext"
                         android:drawableStart="@drawable/person"
                         android:drawablePadding="10dp"
@@ -81,7 +81,7 @@
                         android:id="@+id/etPassword"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:layout_margin="18dp"
+                        android:layout_margin="20dp"
                         android:background="@drawable/white_background_edittext"
                         android:drawableStart="@drawable/pass"
                         android:drawablePadding="10dp"
@@ -100,7 +100,7 @@
                         android:id="@+id/btnLogin"
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_margin="8dp"
                         android:background="@drawable/btn_dark"
                         android:text="Login"
                         android:textColor="#ffffff"
@@ -150,7 +150,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="6dp"
+                        android:layout_margin="12dp"
                         android:orientation="horizontal">
 
                         <ImageView

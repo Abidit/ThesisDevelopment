@@ -34,42 +34,31 @@ import java.util.*
 class SignupForm : AppCompatActivity() {
 
     private lateinit var Fullname : EditText
-    private lateinit var Email : EditText
     private lateinit var Username : EditText
     private lateinit var PasswordS : EditText
     private lateinit var CPassword : EditText
     private lateinit var btnRegister : Button
     private lateinit var Imagee : ImageView
-    private lateinit var spinner : Spinner
-    private val types = arrayOf("Applicant", "Job Owner")
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup_form)
 
         Fullname = findViewById(R.id.etFullname)
-        Email = findViewById(R.id.etEmail)
         Username = findViewById(R.id.etUsernameS)
         PasswordS = findViewById(R.id.etPasswordS)
         CPassword = findViewById(R.id.etCpassword)
         btnRegister = findViewById(R.id.btnSignup)
         Imagee = findViewById(R.id.imggg)
-        spinner = findViewById(R.id.spinnertype)
-        val adapter = ArrayAdapter(
-                this,
-                android.R.layout.simple_list_item_1,types
-        )
-        spinner.adapter = adapter
+
 
         btnRegister.setOnClickListener {
 
             if(validate()) {
                 val fname = Fullname.text.toString()
-                val email = Email.text.toString()
                 val usrnam = Username.text.toString()
                 val passw = PasswordS.text.toString()
                 val cpass = CPassword.text.toString()
-                val utype = spinner.selectedItem.toString()
+
                 //val newuser = USER(fname, email, usrnam, passw)
                 if (passw != cpass) {
                     CPassword.error = "Password does not match."
@@ -78,7 +67,7 @@ class SignupForm : AppCompatActivity() {
                 } else {
 
 
-                    val user = User(Fullname = fname, Email = email, Username = usrnam, Password = passw, Usertype = utype)
+                    val user = User(Fullname = fname, Email = "dummymail@mail.com", Username = usrnam, Password = passw, Usertype = "Applicant")
                     CoroutineScope(Dispatchers.IO).launch {
                         try {
 
@@ -259,11 +248,7 @@ class SignupForm : AppCompatActivity() {
                 Fullname.requestFocus()
                 return false
             }
-            TextUtils.isEmpty(Email.text) -> {
-                Email.error = "Email must not be empty"
-                Email.requestFocus()
-                return false
-            }
+
             TextUtils.isEmpty(PasswordS.text) -> {
                 PasswordS.error = "Password must not be empty"
                 PasswordS.requestFocus()
