@@ -18,7 +18,7 @@ import kotlinx.coroutines.withContext
 import repository.UserRepository
 
 class LoginForm : AppCompatActivity() {
-    private lateinit var etusername : TextInputEditText
+    private lateinit var etusername : EditText
     private lateinit var etpassword : EditText
     private lateinit var loginn : Button
     private lateinit var signn : TextView
