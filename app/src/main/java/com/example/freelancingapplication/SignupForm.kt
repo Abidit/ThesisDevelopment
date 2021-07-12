@@ -38,6 +38,7 @@ class SignupForm : AppCompatActivity() {
     private lateinit var PasswordS : EditText
     private lateinit var CPassword : EditText
     private lateinit var btnRegister : Button
+    private lateinit var btnlogg : TextView
     private lateinit var Imagee : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +49,12 @@ class SignupForm : AppCompatActivity() {
         PasswordS = findViewById(R.id.etPasswordS)
         CPassword = findViewById(R.id.etCpassword)
         btnRegister = findViewById(R.id.btnSignup)
+        btnlogg = findViewById(R.id.txtlogg)
         Imagee = findViewById(R.id.imggg)
+
+        btnlogg.setOnClickListener {
+            startActivity(Intent(this, LoginForm::class.java))
+        }
 
 
         btnRegister.setOnClickListener {
@@ -59,7 +65,6 @@ class SignupForm : AppCompatActivity() {
                 val passw = PasswordS.text.toString()
                 val cpass = CPassword.text.toString()
 
-                //val newuser = USER(fname, email, usrnam, passw)
                 if (passw != cpass) {
                     CPassword.error = "Password does not match."
                     CPassword.requestFocus()
