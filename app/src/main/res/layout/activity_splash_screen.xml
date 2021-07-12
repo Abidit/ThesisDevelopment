@@ -7,7 +7,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgsp"
+    android:background="@color/white"
     tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/splashimg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bgsp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

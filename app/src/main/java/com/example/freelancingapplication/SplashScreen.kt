@@ -5,6 +5,8 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import androidx.core.app.ActivityCompat
 import api.ServiceBuilder
 import connection.CheckConnection
@@ -12,6 +14,7 @@ import kotlinx.coroutines.*
 import repository.UserRepository
 
 class SplashScreen : AppCompatActivity() {
+    private lateinit var imgg : ImageView
     private val permissions = arrayOf(
         android.Manifest.permission.CAMERA,
         android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -20,6 +23,10 @@ class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
+        imgg = findViewById(R.id.splashimg)
+        val topanimate = AnimationUtils.loadAnimation(this,R.anim.animm)
+        imgg.startAnimation(topanimate)
+
         CheckConnection(this,this).checkRegisteredNetwork()
 
 
@@ -31,7 +38,7 @@ class SplashScreen : AppCompatActivity() {
             requestPermission()
         }
         CoroutineScope(Dispatchers.Main).launch {
-            delay(3000)
+            delay(4000)
 
             if(username !="" && password != "")
             {
@@ -83,7 +90,6 @@ class SplashScreen : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        CheckConnection(this,this).unregisteredNetwork()
     }
 
     private fun requestPermission() {
