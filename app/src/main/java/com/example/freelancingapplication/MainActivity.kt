@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         var intents = intent.getIntExtra("fragNumber",-1)
         if(intents < 0)
         {
-            makeCurrentFrag(home)
+
             bottom.menu.findItem(R.id.ic_Home).isChecked = true
 
         }
@@ -49,27 +49,44 @@ class MainActivity : AppCompatActivity() {
         bottom.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.ic_Home ->{
-                    makeCurrentFrag(home)
+
                     pager.currentItem=0
+                    bottom.menu.findItem(R.id.ic_Home).isChecked = true
                 }
                 R.id.ic_Settings -> {
-                    makeCurrentFrag(settings)
-                    pager.currentItem=0
+                    pager.currentItem=3
+                    bottom.menu.findItem(R.id.ic_Settings).isChecked = true
 
                 }
                 R.id.ic_Profile -> {
-                    makeCurrentFrag(profile)
-                    pager.currentItem=0
+                    pager.currentItem=1
+                    bottom.menu.findItem(R.id.ic_Profile).isChecked = true
 
                 }
                 R.id.ic_Jobs -> {
-                    makeCurrentFrag(work)
-                    pager.currentItem=0
-
+                    pager.currentItem=2
+                    bottom.menu.findItem(R.id.ic_Jobs).isChecked = true
                 }
             }
             true
         }
+
+        pager.addOnPageChangeListener(object:ViewPager.OnPageChangeListener{
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+
+            }
+
+            override fun onPageSelected(position: Int) {
+
+
+                bottom.menu.getItem(position).isChecked = true
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+
+            }
+
+        })
     }
 
 
