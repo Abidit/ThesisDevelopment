@@ -12,8 +12,13 @@
 
     <ImageView
         android:id="@+id/splashimg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/bgsp"/>
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/bgsp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

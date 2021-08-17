@@ -18,7 +18,6 @@ class Profile : Fragment() {
     private lateinit var name : TextView
     private lateinit var email : TextView
     private lateinit var type : TextView
-    private lateinit var usrname : TextView
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -29,8 +28,7 @@ class Profile : Fragment() {
         image = view.findViewById(R.id.currentimage)
         name = view.findViewById(R.id.currentname)
         email = view.findViewById(R.id.currentemail)
-        type = view.findViewById(R.id.currentusertype)
-        usrname = view.findViewById(R.id.currentusername)
+        type = view.findViewById(R.id.textViewE)
 
         setProfile()
         return view
@@ -39,10 +37,6 @@ class Profile : Fragment() {
     private fun setProfile() {
         name.text = "Name : ${ServiceBuilder.currentuser?.Fullname.toString()}"
         email.text = "Email: ${ServiceBuilder.currentuser?.Email.toString()}"
-        type.text = "Usertype : ${ServiceBuilder.currentuser?.Usertype.toString()}"
-        usrname.text = "Username : ${ServiceBuilder.currentuser?.Username.toString()}"
-        val img = "${ServiceBuilder.BASE_URL}images/${ServiceBuilder.currentuser?.Image}"
-        Glide.with(context).load(img).into(image)
-        println(img)
+
     }
 }

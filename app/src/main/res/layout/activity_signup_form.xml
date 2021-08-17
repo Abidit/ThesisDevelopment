@@ -26,7 +26,7 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="12dp"
                     android:text="Sign Up"
                     android:textColor="#ffffff"
                     android:textSize="32sp"
@@ -39,7 +39,7 @@
                 <ImageView
                     android:id="@+id/imggg"
                     android:layout_width="300sp"
-                    android:layout_height="200sp"
+                    android:layout_height="180sp"
                     android:src="@drawable/logo2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginVertical="10dp"
                         android:background="@drawable/white_background_edittext"
-                        android:drawableStart="@drawable/person"
+                        android:drawableStart="@drawable/ic_baseline_person_24"
                         android:drawablePadding="10dp"
                         android:ems="10"
                         android:hint="UserName"
@@ -73,8 +73,8 @@
                         android:paddingStart="10dp"
                         android:textColorHint="#000000"
                         android:textSize="16sp"
-                        android:drawableLeft="@drawable/person"
-                        android:paddingLeft="10dp" />
+                        android:paddingLeft="10dp"
+                        android:drawableLeft="@drawable/ic_baseline_person_24" />
 
                     <EditText
                         android:id="@+id/etUsernameS"
@@ -83,7 +83,7 @@
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginVertical="10dp"
                         android:background="@drawable/white_background_edittext"
-                        android:drawableStart="@drawable/person"
+                        android:drawableStart="@drawable/ic_baseline_person_24"
                         android:drawablePadding="10dp"
                         android:ems="10"
                         android:hint="Your Name"
@@ -91,7 +91,7 @@
                         android:paddingStart="10dp"
                         android:textColorHint="#000000"
                         android:textSize="16sp"
-                        android:drawableLeft="@drawable/person"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
                         android:paddingLeft="10dp" />
 
                     <EditText
@@ -101,7 +101,7 @@
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginVertical="10dp"
                         android:background="@drawable/white_background_edittext"
-                        android:drawableStart="@drawable/pass"
+                        android:drawableStart="@drawable/ic_baseline_lock_24"
                         android:drawablePadding="10dp"
                         android:ems="10"
                         android:hint="Password"
@@ -109,15 +109,16 @@
                         android:textColorHint="#000000"
                         android:textSize="16sp"
                         android:paddingLeft="10dp"
-                        android:drawableLeft="@drawable/pass" />
+                        android:drawableLeft="@drawable/ic_baseline_lock_24" />
 
                     <EditText
                         android:id="@+id/etCpassword"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginHorizontal="20dp"
-                        android:layout_marginVertical="10dp"                        android:background="@drawable/white_background_edittext"
-                        android:drawableStart="@drawable/pass"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/white_background_edittext"
+                        android:drawableStart="@drawable/ic_baseline_lock_24"
                         android:drawablePadding="10dp"
                         android:ems="10"
                         android:hint="RePassword"
@@ -125,7 +126,7 @@
                         android:paddingStart="10dp"
                         android:textColorHint="#000000"
                         android:textSize="16sp"
-                        android:drawableLeft="@drawable/pass"
+                        android:drawableLeft="@drawable/ic_baseline_lock_24"
                         android:paddingLeft="10dp" />
 
                     <Button

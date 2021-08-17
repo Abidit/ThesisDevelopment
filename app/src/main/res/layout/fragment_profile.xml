@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f5f5f5"
     tools:context="Fragments.Profile">
+
 
     <LinearLayout
         android:id="@+id/topbar"
@@ -13,44 +18,37 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="#FFFFFF"
-        android:gravity="center_vertical"
         android:padding="16dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="PROFILE"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/top_background" />
+
 
     <ImageView
         android:id="@+id/currentimage"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topbar"
-        app:srcCompat="@drawable/profile" />
+        android:src="@drawable/profile"
+        tools:ignore="VectorDrawableCompat" />
 
     <TextView
         android:id="@+id/currentname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="name"
-        android:textColor="#ffffff"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/currentimage"
@@ -63,7 +61,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="wea@gmail.com"
-        android:textColor="#ffffff"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/currentname"
         app:layout_constraintStart_toStartOf="@+id/currentname"
@@ -74,7 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/white_background"
         android:orientation="vertical"
@@ -94,6 +91,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/top_button_background"
+                android:elevation="5dp"
                 android:orientation="vertical">
 
                 <ImageView
@@ -107,7 +105,7 @@
                     android:id="@+id/textViewA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginHorizontal="10dp"
                     android:text="Settings"
                     android:textAlignment="center"
                     android:textColor="#000000"
@@ -136,8 +134,8 @@
                     android:id="@+id/textViewB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Notification"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Notifiy"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="14sp"
@@ -165,7 +163,7 @@
                     android:id="@+id/textViewC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginHorizontal="10dp"
                     android:text="Payment"
                     android:textAlignment="center"
                     android:textColor="#000000"
@@ -187,7 +185,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Usertype:"
-                android:textColor="#5917e1"
+                android:textColor="#393939"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
@@ -196,19 +195,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Applicant"
+                android:textStyle="bold"
                 android:textAlignment="viewEnd"
-                android:textColor="#5b5b5b"
                 android:textSize="18sp"
                 android:gravity="end" />
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/appCompatImageView2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="10dp"
-            android:alpha="0.5"
-            android:background="#585858" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -222,7 +215,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Mobile:"
-                android:textColor="#5917e1"
+                android:textColor="#393939"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
@@ -230,28 +224,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textStyle="bold"
                 android:text="9874563121"
                 android:textAlignment="viewEnd"
-                android:textColor="#5b5b5b"
                 android:textSize="18sp"
                 android:gravity="end" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@drawable/button_background"
-        android:gravity="center"
-        android:text="Edit Profile"
-        android:textColor="#ffffff"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
